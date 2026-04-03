@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Bank Data BPP Pampus</title>
+
 <style>
 body {
     margin: 0;
@@ -13,6 +14,53 @@ body {
     color: white;
 }
 
+/* SPLASH SCREEN */
+#splash {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #4b2c83, #ff4e50);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    flex-direction: column;
+}
+
+.splash-content {
+    text-align: center;
+    color: white;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.splash-logo {
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+/* LOADING ANIMATION */
+.loader {
+    border: 4px solid rgba(255,255,255,0.3);
+    border-top: 4px solid white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin: 20px auto;
+    animation: spin 1s linear infinite;
+}
+
+/* ANIMASI */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+/* MAIN CONTENT */
 .container {
     max-width: 500px;
     margin: auto;
@@ -49,28 +97,56 @@ p {
 }
 </style>
 </head>
+
 <body>
 
+<!-- SPLASH SCREEN -->
+<div id="splash">
+    <div class="splash-content">
+        <img src="logo.png" class="splash-logo">
+        <h2>BPP PAMONA PUSELEMBA</h2>
+        <div class="loader"></div>
+    </div>
+</div>
+
+<!-- MAIN CONTENT -->
 <div class="container">
     <img src="logo.png" class="logo" alt="Logo">
 
     <h1>BPP PAMONA PUSELEMBA</h1>
     <p>Silahkan Pilih Menu di bawah ini untuk mengakses halaman yang diinginkan.</p>
 
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfS2F7yCuWVV9NOZJDvXjZ5j1nSeCsYzs2vkDWc1NbdNXHAvA/viewform" class="link-btn" target="_blank" rel="noopener noreferrer">Lapor Rekapan Kelompencapir </a>
-    <a href="https://docs.google.com/spreadsheets/d/1L6rNfpLekUaiANQvF0TZQkIvGBJH5SK6WKjz6PdwX0I/edit?gid=1218096336#gid=1218096336" class="link-btn" target="_blank" rel="noopener noreferrer">Monitor Rekapan Kelompencapir </a>
-    <a href="https://script.google.com/macros/s/AKfycbw2acdgIbTWOBKns_rAlIpqInA1FEn_tzFdDjh60j_FRshpuhYq6E6RNnowHxYIFIMU/exec" class="link-btn" target="_blank" rel="noopener noreferrer">SP Padi </a>
-    <a href="https://epersonal.pertanian.go.id/login" class="link-btn" target="_blank" rel="noopener noreferrer">Login E-Personal </a>
-    <a href="#" class="link-btn">SP Hortikulura </a>
-    <a href="https://docs.google.com/spreadsheets/d/1cgUq2zUrq4LeADrryr5a6CbsLpjQmitlX8FfMWO9DnI/edit?gid=923546188#gid=923546188" class="link-btn" target="_blank" rel="noopener noreferrer">Buat Laporan Diseminasi PPL Terampil </a>
-    <a href="#" class="link-btn">Buat Laporan Diseminasi PPL Ahli Madya </a>
-    <a href="https://earth.google.com/web/@-1.78033468,120.57876609,564.95681013a,21852.98880195d,35y,0h,0t,0r/data=CgRCAggBMikKJwolCiExMnFXSjFuY1dVak1JYnpNYXVRWTVSazdXYVVlSjBkaUUgAToDCgEwQgIIAEoICKnozbMGEAE?authuser=0" class="link-btn" target="_blank" rel="noopener noreferrer">Data Polygon </a>
-    <a href="https://drive.google.com/drive/folders/1_iZ8zDgeu9LljJM5tZri2Bk-EsUVDNwz?usp=sharing" class="link-btn" target="_blank" rel="noopener noreferrer">Berkas PNS BPP Pamona Puselemba </a>
-    <a href="https://docs.google.com/spreadsheets/d/1-jRBtNDHTWqkZEkuOIwTIckEbLNosY2nvys8GEQZf5w/edit?gid=113568249#gid=113568249" class="link-btn" target="_blank" rel="noopener noreferrer">Data Laporan LTT </a>
-    <a href="#" class="link-btn">Data Inputan ERDKK </a>
-    
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfS2F7yCuWVV9NOZJDvXjZ5j1nSeCsYzs2vkDWc1NbdNXHAvA/viewform" class="link-btn" target="_blank">Lapor Rekapan Kelompencapir</a>
 
+    <a href="https://docs.google.com/spreadsheets/d/1L6rNfpLekUaiANQvF0TZQkIvGBJH5SK6WKjz6PdwX0I/edit?gid=1218096336#gid=1218096336" class="link-btn" target="_blank">Monitor Rekapan Kelompencapir</a>
+
+    <a href="https://script.google.com/macros/s/AKfycbw2acdgIbTWOBKns_rAlIpqInA1FEn_tzFdDjh60j_FRshpuhYq6E6RNnowHxYIFIMU/exec" class="link-btn" target="_blank">SP Padi</a>
+
+    <a href="https://epersonal.pertanian.go.id/login" class="link-btn" target="_blank">Login E-Personal</a>
+
+    <a href="#" class="link-btn">SP Hortikultura</a>
+
+    <a href="https://docs.google.com/spreadsheets/d/1cgUq2zUrq4LeADrryr5a6CbsLpjQmitlX8FfMWO9DnI/edit?gid=923546188#gid=923546188" class="link-btn" target="_blank">Buat Laporan Diseminasi PPL Terampil</a>
+
+    <a href="#" class="link-btn">Buat Laporan Diseminasi PPL Ahli Madya</a>
+
+    <a href="https://earth.google.com/web/@-1.78033468,120.57876609,564.95681013a,21852.98880195d,35y,0h,0t,0r/data=CgRCAggBMikKJwolCiExMnFXSjFuY1dVak1JYnpNYXVRWTVSazdXYVVlSjBkaUUgAToDCgEwQgIIAEoICKnozbMGEAE?authuser=0" class="link-btn" target="_blank">Data Polygon</a>
+
+    <a href="https://drive.google.com/drive/folders/1_iZ8zDgeu9LljJM5tZri2Bk-EsUVDNwz?usp=sharing" class="link-btn" target="_blank">Berkas PNS BPP Pamona Puselemba</a>
+
+    <a href="https://docs.google.com/spreadsheets/d/1-jRBtNDHTWqkZEkuOIwTIckEbLNosY2nvys8GEQZf5w/edit?gid=113568249#gid=113568249" class="link-btn" target="_blank">Data Laporan LTT</a>
+
+    <a href="#" class="link-btn">Data Inputan ERDKK</a>
 </div>
+
+<!-- SCRIPT -->
+<script>
+window.addEventListener("load", function(){
+    setTimeout(function(){
+        document.getElementById("splash").style.display = "none";
+    }, 2500);
+});
+</script>
 
 </body>
 </html>
